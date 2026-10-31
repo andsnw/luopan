@@ -1,0 +1,74 @@
+name: 推荐收录一个 AI 工具
+description: 推荐一个好用的 AI 工具，维护者审核后加入
+title: "收录：<工具名>"
+labels: ["收录"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: 工具名称
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: 官网地址
+      placeholder: https://
+    validations:
+      required: true
+  - type: dropdown
+    id: cat
+    attributes:
+      label: 分类
+      options:
+        - AI 对话
+        - AI 搜索
+        - AI 写作
+        - AI 绘画
+        - 图片处理
+        - AI 视频
+        - AI 音频
+        - AI 编程
+        - AI 设计
+        - 办公效率
+        - 智能体
+        - 模型与 API
+        - 学习资源
+    validations:
+      required: true
+  - type: textarea
+    id: desc
+    attributes:
+      label: 一句话介绍
+      description: 它能帮用户做什么？60 字以内
+    validations:
+      required: true
+  - type: dropdown
+    id: price
+    attributes:
+      label: 价格
+      options:
+        - 完全免费
+        - 有免费额度
+        - 只能付费
+    validations:
+      required: true
+  - type: dropdown
+    id: cn
+    attributes:
+      label: 国内网络能直接用吗？
+      options:
+        - 能
+        - 不能
+        - 不确定
+  - type: input
+    id: oss
+    attributes:
+      label: 开源仓库地址（可选）
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 确认
+      options:
+        - label: 我确认这是一个真实可用的产品，不是付费推广
+          required: true
